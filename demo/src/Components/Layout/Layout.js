@@ -1,13 +1,15 @@
-import React from 'react'
-import Aux from '../hoc/Aux'
-import classes from './Layout.css'
+import React from "react";
+import Aux from "../hoc/Aux";
+import styled from "styled-components";
 
-const layout= (props) =>
-(<Aux><div>Toolbar,SideDrawer,BackDrop</div>
-    <main className={classes.Content}>
-        {props.children}
-    </main>
-    </Aux>
-    
-    );
-    export default layout;
+const Main = styled.div`
+  margin-top: 96px;
+`;
+
+const layout = props => (
+  <Aux>
+    {/* <div>Toolbar,SideDrawer,BackDrop</div> */}
+    <Main>{props.children}</Main>
+  </Aux>
+);
+export default layout;
